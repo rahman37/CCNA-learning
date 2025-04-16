@@ -9,8 +9,8 @@ Three routers (R1, R2, R3) are statically configured, but PC1 and PC2 cannot pin
 ## Troubleshooting Steps:
 1. Verified interface IPs and interface status using `show ip interface brief`.
 2. Used `show ip route` to check static routes.
-3. Used `traceroute` and `ping` to trace connectivity.
-4. Found and corrected one misconfiguration per router.
+3. Used `ping` to check connectivity.
+4. Found and corrected misconfigurations in each router.
 
 ## Result:
 Ping between PC1 and PC2 is successful after corrections.
