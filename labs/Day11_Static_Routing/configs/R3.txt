@@ -1,0 +1,8 @@
+hostname R3
+int g/0
+ ip address 192.168.13.3 255.255.255.0
+ no shut
+int g0/1
+ ip address 192.168.3.254 255.255.255.0
+ no shut
+ip route 192.168.1.0 255.255.255.0 192.168.13.2
