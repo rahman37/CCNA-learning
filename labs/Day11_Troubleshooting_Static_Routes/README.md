@@ -13,4 +13,4 @@ Three routers (R1, R2, R3) are statically configured, but PC1 and PC2 cannot pin
 4. Found and corrected misconfigurations in each router.
 
 ## Result:
-Ping between PC1 and PC2 is successful after corrections.
+Ping between PC1 and PC2 is successful after corrections .
