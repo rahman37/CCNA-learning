@@ -1,4 +1,6 @@
 # Day 16 - VLANs (Part 1) Lab
+# Network Topology
+![image](https://github.com/user-attachments/assets/898c4068-cf45-4ee0-a667-ce146a5d4bca)
 
 ## Objective
 This lab demonstrates the configuration of multiple VLANs on a switch, assigning appropriate IP addresses, segmenting network traffic, and verifying VLAN isolation using Packet Tracer.
