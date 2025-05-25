@@ -53,6 +53,3 @@ This project simulates a scalable, enterprise-grade Layer 2/3 data center networ
 - SSH, Port Security (optional)
 
 ---
-
-## 📁 Repository Structure
-
