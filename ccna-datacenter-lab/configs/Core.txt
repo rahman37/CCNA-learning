@@ -1,0 +1,21 @@
+hostname CORE
+!
+interface g0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+!
+interface g0/0.99
+ encapsulation dot1Q 99
+ ip address 192.168.99.1 255.255.255.0
+!
+ip dhcp excluded-address 192.168.10.1 192.168.99.1
+ip dhcp pool VLAN10
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 8.8.8.8
+!
+ip dhcp pool VLAN99
+ network 192.168.99.0 255.255.255.0
+ default-router 192.168.99.1
+ dns-server 8.8.8.8
+!
