@@ -1,21 +1,29 @@
-hostname CORE
-!
-interface g0/0.10
- encapsulation dot1Q 10
- ip address 192.168.10.1 255.255.255.0
-!
-interface g0/0.99
- encapsulation dot1Q 99
- ip address 192.168.99.1 255.255.255.0
-!
-ip dhcp excluded-address 192.168.10.1 192.168.99.1
-ip dhcp pool VLAN10
- network 192.168.10.0 255.255.255.0
- default-router 192.168.10.1
- dns-server 8.8.8.8
-!
-ip dhcp pool VLAN99
- network 192.168.99.0 255.255.255.0
- default-router 192.168.99.1
- dns-server 8.8.8.8
-!
+CORE> enable
+CORE#conf t
+CORE(config)#hostname CORE
+CORE(config)#interface g0/0.10
+CORE(config-subif)#encapsulation dot1Q 10
+CORE(config-subif)# ip address 192.168.10.1 255.255.255.0
+CORE(config-subif)# exit
+
+CORE(config)# interface g0/0.99
+CORE(config-subif)# encapsulation dot1Q 99
+CORE(config-subif)# ip address 192.168.99.1 255.255.255.0
+CORE(config-subif)# exit
+
+CORE(config)# ip dhcp excluded-address 192.168.10.1
+CORE(config)# ip dhcp excluded-address 192.168.99.1
+
+CORE(config)# ip dhcp pool VLAN10
+CORE(dhcp-config)# network 192.168.10.0 255.255.255.0
+CORE(dhcp-config)# default-router 192.168.10.1
+CORE(dhcp-config)# dns-server 8.8.8.8
+CORE(dhcp-config)# exit
+
+CORE(config)#ip dhcp pool VLAN99
+CORE(dhcp-config)#network 192.168.99.0 255.255.255.0
+CORE(dhcp-config)#default-router 192.168.99.1
+CORE(dhcp-config)#dns-server 8.8.8.8
+CORE(dhcp-config)#exit
+
+CORE(config)#endCORE#write memory
