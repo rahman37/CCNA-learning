@@ -3,7 +3,8 @@
 This project simulates a scalable, enterprise-grade Layer 2/3 data center network using Cisco Packet Tracer. It includes VLAN segmentation, inter-VLAN routing via Router-on-a-Stick, DHCP, trunking, SSH security, and more — aligning with CCNA-level objectives.
 
 
-DC.png
+<img width="1058" alt="image" src="https://github.com/user-attachments/assets/dbdf3746-ea83-4e84-a562-a3c025540a92" />
+
 
 
 ## 📌 Project Objectives
